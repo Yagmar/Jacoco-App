@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
 
         buttonDivide.setOnClickListener {
             handleOperation(inputA, inputB, resultText) { a, b ->
-                if (b == 0) throw IllegalArgumentException("Division par zéro n'est pas permise.")
+                if (b == 0) throw IllegalArgumentException("Division par zéro n'est pas permise et cela est cool!")
                 calculator.divide(a, b)
             }
         }
