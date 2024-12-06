@@ -1,0 +1,22 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myapplicationjacoco">
+
+
+    <instrumentation
+        android:name="com.example.myapplicationjacoco.JacocoInstrumentation"
+        android:targetPackage="com.example.myapplicationjacoco" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <application>
+        <!-- Déclaration de JacocoInstrumentation -->
+
+
+        <!-- Déclaration de DumpBroadcast -->
+        <receiver android:name="com.example.myapplicationjacoco.DumpBroadcast"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.myapplicationjacoco.DUMP_COVERAGE" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>
