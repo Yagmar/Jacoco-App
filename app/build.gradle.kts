@@ -20,8 +20,7 @@ android {
         versionCode = 1
         versionName = "1.0"
 
-        // Instrumentation Runner pour debugunprotected
-        testInstrumentationRunner = "com.example.myapplicationjacoco.JacocoInstrumentation"
+        // Instrumentation Runner pour debugunprotectede
     }
 
     buildTypes {

@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+
+    <instrumentation
+        android:name=".JacocoInstrumentation"
+        android:targetPackage="com.example.myapplicationjacoco" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -21,6 +26,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver
+            android:name=".DumpBroadcast"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.myapplicationjacoco.STOP_COVERAGE" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
